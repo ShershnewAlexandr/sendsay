@@ -1,0 +1,47 @@
+.header {
+  &__main-container {
+    height: 50px;
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F6F6F6;
+  }
+
+  &__left-block {
+    height: 50px;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    .header__h1 {
+      margin-left: 20px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+  }
+  &__right-block {
+    height: 50px;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    .exit__container {
+      margin-right: 15px;
+    }
+
+    .user-info__main-container {
+      margin-right: 25px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.user-info {
+  &__main-container {
+    height: 30px;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 16px;
+      color: #0D0D0D;
+    }
+  }
+
+  &__separator {
+    margin: 0 5px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.2);
+  }
+}

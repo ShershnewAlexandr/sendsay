@@ -1,0 +1,31 @@
+.fullscreen {
+  &__container {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 7px;
+    outline: none;
+
+    &:focus {
+      border: 2px solid #45A5FF;
+
+      svg {
+        stroke: #0055FB;
+      }
+    }
+
+    &:hover {
+      svg {
+        stroke: #0055FB;
+      }
+    }
+
+    svg {
+      stroke: #0d0d0d;
+    }
+  }
+}

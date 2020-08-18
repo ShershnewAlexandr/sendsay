@@ -1,0 +1,32 @@
+.clear-button {
+  &__container {
+    width: 50px;
+    height: 48px;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #c4c4c4;
+    cursor: pointer;
+    position: relative;
+
+    &:focus {
+      outline-color: #45A5FF;
+
+      svg {
+        stroke: #0055FB;
+      }
+    }
+
+    &:hover {
+      svg {
+        stroke: #0055FB;
+      }
+    }
+
+    svg {
+      stroke: #0d0d0d
+    }
+  }
+}

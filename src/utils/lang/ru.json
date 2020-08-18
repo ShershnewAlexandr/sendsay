@@ -1,0 +1,31 @@
+{
+  "login": {
+    "head" : "API-консолька",
+    "login": "Логин",
+    "subLogin": "Сублогин",
+    "password": "Пароль",
+    "btnEnter": "Войти",
+    "error": "Вход не вышел"
+  },
+
+  "console" : {
+    "head" : "API-консолька",
+    "request": "Запрос:",
+    "response": "Ответ:",
+    "historyItemMenu" : {
+      "execute": "Выполнить",
+      "copy": "Скопировать",
+      "delete": "Удалить"
+    }
+  },
+
+  "text-input": {
+    "option": "Опционально"
+  },
+
+  "buttons": {
+    "exit": "Выйти",
+    "send": "Отправить",
+    "format": "Форматировать"
+  }
+}

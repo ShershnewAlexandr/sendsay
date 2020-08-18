@@ -1,0 +1,38 @@
+.exit {
+  &__container {
+    width: 100px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    outline: none;
+    user-select: none;
+
+    span {
+      margin-right: 11px;
+    }
+
+    &:focus {
+      border: 2px solid #45A5FF;
+      color: #0055FB;
+      svg {
+        stroke: #0055FB;
+      }
+    }
+
+    &:hover {
+      color: #0055FB;
+      svg {
+        stroke: #0055FB;
+      }
+    }
+
+    svg {
+      stroke: #0d0d0d;
+    }
+  }
+}

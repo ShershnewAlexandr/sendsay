@@ -1,0 +1,47 @@
+.format {
+  &__container {
+    width: 170px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    outline: none;
+    user-select: none;
+
+    &:disabled {
+      cursor: default;
+      color: #c4c4c4;
+
+      svg {
+        stroke: #c4c4c4;
+      }
+    }
+
+    span {
+      margin-left: 10px;
+    }
+
+    &:focus {
+      border: 2px solid #45A5FF;
+      color: #0055FB;
+      svg {
+        stroke: #0055FB;
+      }
+    }
+
+    &:hover:not(&:disabled) {
+      color: #0055FB;
+      svg {
+        stroke: #0055FB;
+      }
+    }
+
+    svg {
+      stroke: #0d0d0d;
+    }
+  }
+}

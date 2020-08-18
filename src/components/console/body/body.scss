@@ -1,0 +1,44 @@
+.body {
+  &__main-container {
+    width: 100%;
+    height: calc(100vh - 170px);
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+  }
+
+  &__spliter {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__drag-container {
+      width: 100px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+
+        svg {
+          fill-opacity: 0.4;
+        }
+      }
+
+      &:active {
+        cursor: col-resize;
+      }
+    }
+
+    svg {
+      fill: black;
+      fill-opacity: 0.2;
+    }
+  }
+}
