@@ -21,6 +21,7 @@ function* loginSaga(action) {
         })
         yield put(loginActions.loginSuccess(resp.account, resp.sublogin));
         yield put(loginActions.loadHistory());
+        yield put(loginActions.loadSettings());
     } catch (err) {
         action.reject({id: err.id, explain: err.explain});
         return;
@@ -41,11 +42,14 @@ function* autoLogin() {
             })
             yield put(loginActions.loginSuccess(resp.account, resp.sublogin));
             yield put(loginActions.loadHistory());
+            yield put(loginActions.loadSettings());
             yield put(push(routes.CONSOLE));
         } catch (e) {
+            yield put(loginActions.autoLoginError());
             yield call(logoutSaga);
         }
     } else {
+        yield put(loginActions.autoLoginError());
         yield call(logoutSaga);
     }
 }

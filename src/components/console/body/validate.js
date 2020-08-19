@@ -6,9 +6,8 @@ validate = (values, args) => {
     } else if (typeof values.request !== 'string') {
         errors.request = 'Not a string';
     } else {
-        let parsedJSON = null;
         try {
-            parsedJSON = JSON.parse(values.request);
+            JSON.parse(values.request);
         } catch {
             errors.request = 'Not a JSON';
         }

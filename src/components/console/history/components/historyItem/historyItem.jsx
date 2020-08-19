@@ -6,6 +6,7 @@ import {ReactComponent as Spliter} from "../../../../../assets/img/spliter.svg";
 import ConsoleActions from "../../../../../ducks/console/actions";
 import HistoryItemMenu from "./components/historyItemMenu/historyItemMenu";
 import "./historyItem.scss";
+import lang from '../../../../../utils/lang/ru.json';
 
 function HistoryItem(props) {
     const {id, isError, request,
@@ -14,8 +15,12 @@ function HistoryItem(props) {
         consoleHistoryItemCopyAction,
         consoleHistoryItemDeleteAction
     } = props;
+
     return (
         <div className="history-item__main-container">
+            <div className="history-item__copy-info">{
+                lang.console.historyItemMenu.copied
+            }</div>
             <div className="history-item__select-container" onClick={() => {consoleHistoryItemSelectAction(id)}}>
                 <div className={`history-item__indicator_${isError ? "error" : "success"}`}></div>
                 {request.action && (

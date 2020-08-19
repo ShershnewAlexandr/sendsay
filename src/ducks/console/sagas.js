@@ -117,6 +117,21 @@ function* setHistory(newHistory) {
     localStorage.setItem(historyKey, JSON.stringify(newHistory));
 }
 
+function* updateSettings() {
+    let w1 = localStorage.getItem("console_settings_w1");
+    if (!w1) {
+        w1 = 50;
+    }
+    const settings = {
+        w1: Number(w1)
+    }
+    yield put(consoleActions.consoleUpdateSettings(settings));
+}
+
+function setSettings(action) {
+    localStorage.setItem("console_settings_w1", String(action.w1));
+}
+
 export default function*() {
     yield all([
         takeLatest(types.CONSOLE_REQUEST_REQUEST, requestSaga),
@@ -126,6 +141,8 @@ export default function*() {
         takeLatest(types.CONSOLE_HISTORY_ITEM_SELECT, selectHistory),
         takeLatest(types.CONSOLE_HISTORY_ITEM_EXECUTE, executeHistory),
         takeLatest(types.CONSOLE_HISTORY_ITEM_COPY, copyHistory),
-        takeLatest(types.CONSOLE_HISTORY_ITEM_DELETE, deleteHistory)
+        takeLatest(types.CONSOLE_HISTORY_ITEM_DELETE, deleteHistory),
+        takeLatest(types.CONSOLE_SET_SETTINGS, setSettings),
+        takeLatest(types.CONSOLE_LOAD_SETTINGS, updateSettings)
     ]);
 }

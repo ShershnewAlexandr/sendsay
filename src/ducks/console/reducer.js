@@ -4,7 +4,10 @@ import loginTypes from '../login/types';
 const initialState = {
     isErrorResponse: false,
     submitting: false,
-    history: []
+    history: [],
+    settings: {
+        w1: 50
+    }
 };
 
 export default function(state = initialState, action) {
@@ -39,6 +42,12 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 isErrorResponse: action.isErrorResponse
+            };
+
+        case types.CONSOLE_UPDATE_SETTINGS:
+            return {
+                ...state,
+                settings: action.settings
             };
 
         case loginTypes.LOGOUT_REQUEST:

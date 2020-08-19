@@ -3,7 +3,8 @@ import types from './types';
 const initialState = {
     login: null,
     sublogin: null,
-    isAuthorized: false
+    isAuthorized: false,
+    autologinError: false
 };
 
 export default function(state = initialState, action) {
@@ -26,8 +27,17 @@ export default function(state = initialState, action) {
                 ...state,
             };
 
+        case types.AUTO_LOGIN_ERROR:
+            return {
+                ...state,
+                autologinError: true
+            };
+
         case types.LOGOUT_REQUEST:
-            return initialState
+            return {
+                ...initialState,
+                autologinError: true
+            }
 
         default:
             return state;

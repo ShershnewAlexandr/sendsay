@@ -30,6 +30,7 @@
     position: absolute;
     background: linear-gradient(269.93deg, #F6F6F6 0.06%, rgba(246, 246, 246, 0) 99.93%);
     pointer-events: none;
+    z-index: 200;
   }
 
   &__fix-scroll {

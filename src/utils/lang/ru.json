@@ -15,6 +15,7 @@
     "historyItemMenu" : {
       "execute": "Выполнить",
       "copy": "Скопировать",
+      "copied": "скопировано",
       "delete": "Удалить"
     }
   },

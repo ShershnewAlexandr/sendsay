@@ -26,5 +26,17 @@ export default {
         return {
             type: consoleTypes.CONSOLE_LOAD_HISTORY
         };
+    },
+
+    loadSettings() {
+        return {
+            type: consoleTypes.CONSOLE_LOAD_SETTINGS
+        };
+    },
+
+    autoLoginError() {
+        return {
+            type: types.AUTO_LOGIN_ERROR
+        };
     }
 }

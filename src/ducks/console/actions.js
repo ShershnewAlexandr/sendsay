@@ -72,4 +72,18 @@ export default {
             isErrorResponse
         };
     },
+
+    consoleSetSettings(w1) {
+        return {
+            type: types.CONSOLE_SET_SETTINGS,
+            w1
+        };
+    },
+
+    consoleUpdateSettings(settings) {
+        return {
+            type: types.CONSOLE_UPDATE_SETTINGS,
+            settings
+        };
+    },
 }
