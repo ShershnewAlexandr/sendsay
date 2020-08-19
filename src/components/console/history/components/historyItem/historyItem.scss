@@ -90,8 +90,12 @@
     border-radius: 5px;
     top: -26px;
     left: 25px;
-    transition: height 2s linear;
     pointer-events: none;
     opacity: 0;
+
+    &_active {
+      opacity: 1;
+      top: 5px;
+    }
   }
 }

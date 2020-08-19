@@ -90,6 +90,16 @@ function* copyHistory(action) {
     const request = JSON.stringify(historyItem.request);
     const requestBeauty = JSONFormatter.format(request, "  ");
     copy(requestBeauty);
+    const els = document.querySelectorAll('.history-item__copy-info');
+    const animEl = els[action.id];
+    animEl.style.transition = "none";
+    animEl.style.top = "5px";
+    animEl.style.opacity = "1";
+    setTimeout(() => {
+        animEl.style.transition = "all 1s linear";
+        animEl.style.top = "-26px";
+        animEl.style.opacity = "0";
+    }, 100);
 }
 
 function* clearHistory() {
